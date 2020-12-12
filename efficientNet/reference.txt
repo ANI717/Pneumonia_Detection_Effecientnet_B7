@@ -1,0 +1,2 @@
+Author: Luke Melas-Kyriazi
+Link: https://github.com/lukemelas/EfficientNet-PyTorch

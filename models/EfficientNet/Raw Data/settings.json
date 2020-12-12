@@ -1,0 +1,17 @@
+{"_": "shape of the image [width, height]",
+
+	"train":
+	{
+    	"shape": [224, 224],
+    	"classes": 2,
+		"batch": 4,
+		"epoch": 50
+	},
+
+	"test":
+	{
+    	"model": "models/epoch.pth",
+		"shape": [224, 224],
+		"classes": 2
+	}
+}

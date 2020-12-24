@@ -25,10 +25,11 @@ Validation Dataset is created from Training Dataset for calibrating Hyperparamet
 ## Codebase
 Driver Program
 ```
-train.py = run training session
-test.py = run testing session
-folder_to_csv.py = list files in a folder
-merge_csv.py = merge contents in CSV files
+train.py = runs training session
+test.py = runs testing session
+folder_to_csv.py = lists files in a folder
+merge_csv.py = merges contents in CSV files
+augmentation.py = creates augmented dataset
 ```
 Setting File
 ```

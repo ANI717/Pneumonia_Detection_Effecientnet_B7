@@ -44,3 +44,12 @@ https://github.com/lukemelas/EfficientNet-PyTorch
 ```
 ./efficientNet/
 ```
+
+## Result
+Plain Dada (No Augmentation)
+```
+Accuracy = 87.98%
+Precision = 100%
+Recall = 83.87%
+F1 Score = 91.23
+```

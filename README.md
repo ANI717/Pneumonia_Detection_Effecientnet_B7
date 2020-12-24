@@ -9,15 +9,17 @@ Unzip ZhangLabData.zip
 Copy it to "./data/" directory
 ```
 
-Training Dataset
+Training Dataset:
 ```
 Total Images: 5233
 Normal Healthy Person: 1349
 Pnumonia Patients: 3884
 ```
-Testing Dataset
+Testing Dataset:
 ```
-Total Images: 5856
-Normal Healthy Person: 1583
-Pnumonia Patients: 4273
+Total Images: 624
+Normal Healthy Person: 234
+Pnumonia Patients: 390
 ```
+
+Validation Dataset is created from Training Dataset for calibrating Hyperparameters.

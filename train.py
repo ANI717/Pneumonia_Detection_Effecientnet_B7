@@ -21,6 +21,9 @@ from _train_test import NNTools
 #___Global Variables:
 TRAIN_DATA = 'data/train.csv'
 VAL_DATA = 'data/val.csv'
+# TRAIN_DATA = 'data/train_aug.csv'
+# VAL_DATA = 'data/val_aug.csv'
+
 SETTINGS = 'settings.json'
 
 

@@ -29,6 +29,16 @@ from sklearn.utils import shuffle
 #         "data/lists/PNEUMONIA/val.csv"]
 # OFILE = "data/val.csv"
 
+# FILE = ["data/lists/NORMAL/train.csv",
+#         "data/lists/Augmented/train.csv",
+#         "data/lists/PNEUMONIA/train.csv"]
+# OFILE = "data/train_aug.csv"
+
+# FILE = ["data/lists/NORMAL/val.csv",
+#         "data/lists/Augmented/val.csv",
+#         "data/lists/PNEUMONIA/val.csv"]
+# OFILE = "data/val_aug.csv"
+
 FILE = ["data/lists/NORMAL/test.csv",
         "data/lists/PNEUMONIA/test.csv"]
 OFILE = "data/test.csv"

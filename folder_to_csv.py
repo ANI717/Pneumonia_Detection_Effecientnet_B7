@@ -22,6 +22,10 @@ import numpy as np
 import pandas as pd
 
 
+DIR = "data/Augmented_Dataset"
+ODIR = "data/lists/Augmented/"
+LABEL = 0
+
 # DIR = "data/ZhangLabData/CellData/chest_xray/train/NORMAL"
 # ODIR = "data/lists/NORMAL/"
 # LABEL = 0
@@ -34,12 +38,12 @@ import pandas as pd
 # ODIR = "data/lists/NORMAL/"
 # LABEL = 0
 
-DIR = "data/ZhangLabData/CellData/chest_xray/test/PNEUMONIA"
-ODIR = "data/lists/PNEUMONIA/"
-LABEL = 1
+# DIR = "data/ZhangLabData/CellData/chest_xray/test/PNEUMONIA"
+# ODIR = "data/lists/PNEUMONIA/"
+# LABEL = 1
 
-# RATIO = [0.9, 0.1, 0] # [train, val, test]
-RATIO = [0, 0, 1] # [train, val, test]
+RATIO = [0.9, 0.1, 0] # [train, val, test]
+# RATIO = [0, 0, 1] # [train, val, test]
 
 SEED = 717
 RANDOM = 1 # True = 1, False = 0

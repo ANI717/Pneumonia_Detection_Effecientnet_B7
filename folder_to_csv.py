@@ -22,22 +22,25 @@ import numpy as np
 import pandas as pd
 
 
-#___Global Variables:
-DIR = "data/images/train/NORMAL"
-ODIR = "data/lists/NORMAL/"
-LABEL = 0
-# DIR = "data/images/train/PNEUMONIA"
-# ODIR = "data/lists/PNEUMONIA/"
-# LABEL = 1
-# DIR = "data/images/test/NORMAL"
+# DIR = "data/ZhangLabData/CellData/chest_xray/train/NORMAL"
 # ODIR = "data/lists/NORMAL/"
 # LABEL = 0
-# DIR = "data/images/test/PNEUMONIA"
+
+# DIR = "data/ZhangLabData/CellData/chest_xray/train/PNEUMONIA"
 # ODIR = "data/lists/PNEUMONIA/"
 # LABEL = 1
 
-# RATIO = [0.95, 0.05, 0] # [train, val, test]
+# DIR = "data/ZhangLabData/CellData/chest_xray/test/NORMAL"
+# ODIR = "data/lists/NORMAL/"
+# LABEL = 0
+
+DIR = "data/ZhangLabData/CellData/chest_xray/test/PNEUMONIA"
+ODIR = "data/lists/PNEUMONIA/"
+LABEL = 1
+
+# RATIO = [0.9, 0.1, 0] # [train, val, test]
 RATIO = [0, 0, 1] # [train, val, test]
+
 SEED = 717
 RANDOM = 1 # True = 1, False = 0
 
@@ -56,7 +59,8 @@ def main():
     # create image list with proper directory path
     image = []
     for im in content:
-        image.append(DIR + "/" + im)
+        if im.split('.')[-1] == 'jpeg':
+            image.append(DIR + "/" + im)
     
     # shuffle list randomly
     if RANDOM == 1:
@@ -74,7 +78,7 @@ def main():
     
     # create output directory if required
     if not os.path.exists(ODIR):
-        os.mkdir(ODIR)
+        os.makedirs(ODIR)
     
     # write lists in CSV files
     pd.DataFrame(train, columns =['image',

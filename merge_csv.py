@@ -21,15 +21,17 @@ from sklearn.utils import shuffle
 
 
 #___Global Variables:
-FILE = ["data/lists/NORMAL/train.csv",
-        "data/lists/PNEUMONIA/train.csv"]
-OFILE = "data/train.csv"
+# FILE = ["data/lists/NORMAL/train.csv",
+#         "data/lists/PNEUMONIA/train.csv"]
+# OFILE = "data/train.csv"
+
 # FILE = ["data/lists/NORMAL/val.csv",
 #         "data/lists/PNEUMONIA/val.csv"]
 # OFILE = "data/val.csv"
-# FILE = ["data/lists/NORMAL/test.csv",
-#         "data/lists/PNEUMONIA/test.csv"]
-# OFILE = "data/test.csv"
+
+FILE = ["data/lists/NORMAL/test.csv",
+        "data/lists/PNEUMONIA/test.csv"]
+OFILE = "data/test.csv"
 
 SEED = 717
 

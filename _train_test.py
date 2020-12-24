@@ -100,7 +100,7 @@ class NNTools:
 
         # checks and creates output directories
         if not os.path.exists(ODIR):
-            os.mkdir(ODIR)        
+            os.mkdir(ODIR)    
         if not os.path.exists(os.path.join(ODIR,"curves")):
             os.mkdir(os.path.join(ODIR,"curves"))        
         if not os.path.exists(os.path.join(ODIR,"weights")):
@@ -188,6 +188,9 @@ class NNTools:
                     epoch_loss = running_loss/100
                     running_loss = 0.0
                     start = timeit.default_timer()
+                
+                # Free memory
+                del image, label, output
 
             # accuracy count on dev set
             accuracy = self.test(devset)
@@ -246,7 +249,8 @@ class NNTools:
             count += self.batch_size
 
             # produces output and prediction
-            output = model(image.cuda())
+            with torch.no_grad():
+                output = model(image.cuda())
             _, predicted = torch.max(output.data, 1)
 
             # calculates accuracy
@@ -266,6 +270,9 @@ class NNTools:
             # print status for every 100 mini-batches
             if display and count%100 == 0:
                 print("[{0: 5d}] accuracy: {1: 2.2f}".format(count, total_accuracy*100/count))
+            
+            # Free memory
+            del image, label, output, predicted
 
         # show end results and creates error CSV file
         if display:

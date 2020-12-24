@@ -66,10 +66,24 @@ class Datagen(Dataset):
         """
 
         image = cv2.imread(iname)
+        
+        row, column, _ = image.shape
+        if row < column:
+            image = cv2.copyMakeBorder(image, 
+                                (column-row)//2, 0, 0, 0, cv2.BORDER_CONSTANT)
+            image = cv2.copyMakeBorder(image, 
+                                0, (column-row)//2, 0, 0, cv2.BORDER_CONSTANT)
+        elif row > column:
+            image = cv2.copyMakeBorder(image, 
+                                0, 0, (row-column)//2, 0, 
+                                                        cv2.BORDER_CONSTANT)
+            image = cv2.copyMakeBorder(image, 
+                                0, 0, 0, (row-column)//2,
+                                                        cv2.BORDER_CONSTANT)
+        
         image = cv2.resize(image, (self.shape[0], self.shape[1]))
-        image = self.transform(image)
 
-        return image
+        return self.transform(image)
 
 
     def get_label(self, label):

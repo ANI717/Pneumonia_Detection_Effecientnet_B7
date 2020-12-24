@@ -19,7 +19,7 @@ from _train_test import NNTools
 
 
 #___Global Variables:
-TEST_DATA = 'data/test.csv'
+TEST_DATA = 'data/val.csv'
 SETTINGS = 'settings.json'
 
 

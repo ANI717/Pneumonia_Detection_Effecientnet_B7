@@ -47,7 +47,7 @@ https://github.com/lukemelas/EfficientNet-PyTorch
 ```
 
 ## Result
-Plain Dada (No Augmentation)
+Plain Data (No Augmentation)
 ```
 Accuracy = 87.98%
 Precision = 100%

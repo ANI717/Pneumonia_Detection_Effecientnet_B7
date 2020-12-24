@@ -38,5 +38,9 @@ Utility Classes
 ```
 _datagen.py = data generator for deep learning session
 _train_test.py = runs deep learning session
-
+```
+EfficientNet by Luke Melas-Kyriazi
+https://github.com/lukemelas/EfficientNet-PyTorch
+```
+./efficientNet/
 ```
